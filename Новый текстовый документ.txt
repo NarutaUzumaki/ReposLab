@@ -1,0 +1,40 @@
+#include "stdafx.h"
+#include "windows.h"
+#include "iostream"
+
+using namespace std;
+
+int main()
+{	//111111111111111
+	cout << "Tusk 1" << endl;
+	const int m = 5;			//размер массива в константе
+	int A[m];					//одномерный массив
+	
+	for (int i = 0; i < m; i++) {
+		cout << "[" << i  << "]" << ": ";
+		cin >> A[i];			//ввод массива с клавиатуры
+	}
+	int min = A[0];
+	for (int i = 0; i <m ; i++) {
+		if (A[i] < min)			
+		{
+			min = A[i];			//если элемент массива меньше ьинимального, то присвоить значение минимального.
+		}
+	}
+	cout << "min=" << min << endl;	//вывод минимального значения массива.
+
+	//22222222222222
+	cout << "Tusk 2" << endl;
+
+	double count = 0;
+	for (int i = 0; i < m; i++) {
+		if (A[i] > 10.5) {
+			count++;			//подсчет жлементов больше чем 10.5
+		}
+	}
+
+	cout << "Elementu>10.5=" << count << endl;		//вывод количества чисел больших чем 10.5
+
+	system("pause");
+	return 0;
+}
